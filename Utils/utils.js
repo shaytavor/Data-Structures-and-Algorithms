@@ -5,7 +5,13 @@ let utils = function() {
         let temp = a[i];
         a[i] = a[j];
         a[j] = temp;
-    }
+    };
 
-    return {compare, swap};
+    let generateRandomArray = function(size) {
+        let res = [];
+        for(let i = 0; i < size; i++)
+            res.push(parseInt(Math.random() * 100));
+        return res;
+    };
+    return {compare, swap, generateRandomArray};
 }();
